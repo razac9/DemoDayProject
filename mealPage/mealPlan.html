@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plan</title>
+    <link rel = "stylesheet" href = "mealStyle.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <!-- @NOTE linking firebase version 8 CDNs first -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script defer src = "fire-init.js"></script>
+</head>
+<body>
+    <nav>
+        <div id = "Logo">
+            <a href ="../homePage/home.html"><img src = "../images/hulLogo.png" width = "250px" height = "50px"></a>
+            
+        </div>
+
+        <div id = "navItems" class = "container">
+            <ul>
+                <li><a href = "../homePage/home.html">Home</a></li>
+                <li><a href = "mealPage/mealPlan.html">Meal Plan</a></li>
+                <li><a href = "../exercisePage/exercisePage.html">Exercise Routine</a></li>
+                <li><a href = "../messageBoard/message.html">Messaging Center</a></li>
+                <li><a href = "#" id = "special">Upgrade!</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main>
+        <div id = "bBox">
+            <div id = "pNames">    
+                <p>Meal # 1</p>
+            </div>
+            <div class = "box">
+                <div class = "foodImg" id = "img1"></div>
+                <p id = "fTitle1">Title:</p>
+                <p id = "calories1">Calories:</p>
+                <p id = "carbs1">Carbs:</p>
+                <p id = "fat1">Fat: </p>
+                <p id = "protein1">Protein:</p>
+            </div>
+        </div>
+        <div id = "lBox">
+            <div id = "pNames">    
+                <p>Meal #2</p>
+            </div>
+            <div class = "box">
+                <div class = "foodImg" id = "img2"></div>
+                <p id = "fTitle2">Title: </p>
+                <p id = "calories2">Calories: </p>
+                <p id = "carbs2">Carbs:</p>
+                <p id = "fat2">Fat:</p>
+                <p id = "protein2">Protein: </p>
+            </div>
+        </div>
+        <div id = "dBox">
+            <div id = "pNames">    
+                <p>Meal #3</p>
+            </div>
+            <div class = "box">
+                <div class = "foodImg" id = "img3"></div>
+                <p id = "fTitle3">Title: </p>
+                <p id = "calories3">Calories: </p>
+                <p id = "carbs3">Carbs: </p>
+                <p id = "fat3">Fat: </p>
+                <p id = "protein3">Protein: </p>
+            </div>
+        </div>
+    </main>
+    <script src = "meal.js"></script>
+</body>
+</html>

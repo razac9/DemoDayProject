@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel = "stylesheet" href = "home.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <!-- @NOTE linking firebase version 8 CDNs first -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script defer src = "fire-init.js"></script>
+    <!-- <script defer src = "../Login-Signup/signup.js"></script>
+    <script defer src = "../Login-Signup/signin.js"></script> -->
+    <script defer src = "home.js"></script>
+</head>
+<body>
+    <nav>
+        <div id = "Logo">
+            <a href ="home.html"><img src = "../images/hulLogo.png" width = "250px" height = "50px"></a>
+            
+        </div>
+
+        <div id = "navItems" class = "container">
+            <ul>
+                <li><a href = "home.html">Home</a></li>
+                <li><a href = "../mealPage/mealPlan.html">Meal Plan</a></li>
+                <li><a href = "../exercisePage/exercisePage.html">Exercise Routine</a></li>
+                <li><a href = "../messageBoard/message.html">Messaging Center</a></li>
+                <li><a href = "#" id = "special">Upgrade!</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container1">
+        <div class="box left-box">
+            <div class="label">Profile</div>
+            <h2 id = "name">Name: </h2>
+            <h2 id = "pAge">Age:</h2>
+            <h2 id = "pWeight">Weight:</h2>
+            <h2 id = "pHeight">Height:</h2>
+            <h2 id = "pBMI">BMI:</h2>
+        </div>
+        
+        <section class = "quote">
+            <h1 id = "qQuote">Quotes</h1>
+            <br>
+            <h2 id = "author">- Author</h2>
+            <!-- <button onclick="fetchUselessFacts()">Find Quotes</button>
+            <div id="factContainer"></div> -->
+        </section>
+       
+        <div class="box right-box">
+            <div class="label">Goals</div>
+            <h2 id = "pG1">Goal 1:</h2>
+            <h2 id = "pG2">Goal 2:</h2>
+            <h2 id = "pG3">Goal 3:</h2>
+        </div>
+    </div>
+    <script src = "homeAPI.js"></script>
+    
+</body>
+</html>

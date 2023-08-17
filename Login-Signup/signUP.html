@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel = "stylesheet" href = "styleSU.css">
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <!-- @NOTE linking firebase version 8 CDNs first -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script defer src = "fire-init.js"></script>
+    <script defer src = "signup.js"></script>
+</head>
+<body>
+    <div id = "message">
+        <h1>Welcome! Please Create An Account</h1>
+    </div>
+    <div id = "signInBox">
+        <div id = "nameBox">
+            <form>
+                <p>Name</p>
+                <input type = "text" id = "fullName" placeholder="Type in your full name">
+            </form>
+        </div>
+        <div id = "userEmail">
+            <form>
+                <p>Email</p>
+                <input type = "text" id = "email" placeholder="Type in your email">
+            </form>
+        </div>
+        <div id = "passwordBox">
+            <form>
+                <p>Password</p>
+                <input type = "text" id = "password" placeholder="Create your password">
+            </form>
+        </div>
+        <div id = "userAge">
+                <p>Age</p>
+                <input type = "text" id = "age" placeholder="Type in your age">
+        </div>
+        <div id = "userHeight">
+                <p>Height</p>
+                <input type = "text" id = "height" placeholder="Type in your height (e.g. 5'7)">
+        </div>
+        <div id = "userWeight">
+                <p>Weight</p>
+                <input type = "text" id = "weight" placeholder="Type in your weight in pounds">
+        </div>
+        <div id = "weightGoal">
+                <label>Choose a Weight Goal: </label>
+                <select class = "desiredGoals" id = "goal1">
+                    <option hidden disabled selected value = ""> -- Select an option -- </option>
+                    <option id = "increase">Increase Current Weight</option>
+                    <option id = "maintain">Maintain Current Weight</option>
+                    <option id = "decrease">Decrease Current Weight</option>
+                </select>
+        </div>
+        <div id = "fitnessGoal">
+                <label>Choose 1st Fitness Goal: </label>
+                <select class = "desiredGoals" id = "goal2">
+                    <option hidden disabled selected value = ""> -- Select an option -- </option>
+                    <option id = "increaseUStrength">Upper Body Strength</option>
+                    <option id = "increaseLStrength">Lower Body Strength</option>
+                    <option id = "increaseUEndurance">Upper Body Endurance</option>
+                    <option id = "increaseLEndurance">Lower Body Endurance</option>
+                    <option id = "increaseCardio">Cardio</option>
+                </select>
+        </div>
+        <div id = "2nd_fitnessGoal">
+                <label>Choose 2nd Fitness Goal: </label>
+                <select class = "desiredGoals" id = "goal3">
+                    <option hidden disabled selected value = ""> -- Select an option -- </option>
+                    <option id = "increaseUStrength">Upper Body Strength</option>
+                    <option id = "increaseLStrength">Lower Body Strength</option>
+                    <option id = "increaseUEndurance">Upper Body Endurance</option>
+                    <option id = "increaseLEndurance">Lower Body Endurance</option>
+                    <option id = "increaseCardio">Cardio</option>
+                </select>
+        </div>
+
+        <div id = "btn">
+                <button id = "signUp" class = "pill" type = "button">Create Account</button>
+        </div>
+        <div id = "loginRedirection">
+            <p><a href = "signIn.html">Have an account? Login here!</a></p>
+        </div>
+    </div>
+    
+</body>
+</html>

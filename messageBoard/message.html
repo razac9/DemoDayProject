@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <link rel = "stylesheet" href = "message.css">
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <!-- @NOTE initializing firebase -->
+    <script defer src="initMB-firebase.js"></script>
+    <script defer src = "message.js"></script>
+</head>
+<body>
+    <nav>
+        <div id = "Logo">
+            <a href ="../homePage/home.html"><img src = "../images/hulLogo.png" width = "250px" height = "50px"></a>
+            
+        </div>
+
+        <div id = "navItems" class = "container">
+            <ul>
+                <li><a href = "../homePage/home.html">Home</a></li>
+                <li><a href = "mealPage/mealPlan.html">Meal Plan</a></li>
+                <li><a href = "../exercisePage/exercisePage.html">Exercise Routine</a></li>
+                <li><a href = "message.html">Messaging Center</a></li>
+                <li><a href = "#" id = "special">Upgrade!</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div id = "mainBox">
+            <h2 id = "introText">HealthUpLift Message Board</h2>
+            <a href = "messagecreate.html">Create A Post</a>
+            <div id = "responseBox"></div>
+        </div>
+
+
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Routine</title>
+    <link rel="stylesheet" href="exercise.css">
+
+</head>
+<body>
+
+  
+  <!--nav bar-->
+  <nav>
+    <div id = "Logo">
+        <a href ="#"><img src = "../images/hulLogo.png" width = "250px" height = "50px"></a>
+        <!-- <h1><strong>HealthUpLift</strong></h1> -->
+    </div>
+
+    <div id = "navItems" class = "container">
+        <ul>
+            <li><a href = "../homePage/home.html">Home</a></li>
+            <li><a href = "../mealPage/mealPlan.html">Meal Plan</a></li>
+            <li><a href = "/exercisePage/exercisePage.html">Exercise Routine</a></li>
+            <li><a href = "../messageBoard/message.html">Messaging Center</a></li>
+            <li><a href = "#" id = "special">Upgrade!</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main>
+      <!--AVAILABLE TIME-->
+  <div id="availabilityForm">
+    <h1>Enter Your Available Time</h1>
+    <label for="timeInput">Available Time:</label>
+    <input type="time" id="timeInput">
+    <button onclick="submitTime()">Submit</button>
+    <p id="confirmationMessage"></p>
+  </div>
+  
+  
+  <script>
+    function submitTime() {
+      const timeInput = document.getElementById("timeInput").value;
+      const confirmationMessage = document.getElementById("confirmationMessage");
+
+      if (timeInput) {
+        confirmationMessage.textContent = `Your available time is: ${timeInput}`;
+      } else {
+        confirmationMessage.textContent = "Please enter a valid time.";
+      }
+    }
+  </script>
+  <!--API-->
+  <h1>Random Exercise Generator</h1>
+    <label for="category">Select Exercise Category:</label>
+    <select id="category">
+        <option value="UpperBodyStrenght">Upper Body Strength</option>
+        <option value="LowerBodyStrenght">Lower Body Strength</option>
+        <option value="UpperBodyEndurance">Upper Body Endurance</option>
+        <option value="LowerBodyEndurance">Lower Body Endurance</option>
+        <option value="Cardio">Cardio</option>
+    </select>
+    <br>
+    <button id="generateBtn">Generate Random Exercise</button>
+    <p id="exerciseDisplay"></p>
+
+    <script>
+        const exercises = {
+            UpperBodyStrenght: ["Push-ups", "Push Press", "Inverted Row", "Dumbbell Bench Press", "Weighted Dip"],
+            LowerBodyStrenght: ["Squats", "Leg Reverse Crunch", "Tuck Jumps", "Bicycle Crunches", "Leteral Ski Jumps"],
+            UpperBodyEndurance: ["Pull-ups", "Kettlebell Single-Arm Shoulder Press", "Push-Ups", "Bent-Over Row","Bodyweight Squats"],
+            LowerBodyEndurance: ["Jumping jacks", "Split squats", "Glute bridges", "Dead lifts", "Reverse lunges"],
+            Cardio: ["Froggy jumps", "Burpees", "Squat jumps", "Plyo jacks", "Jump kick lunge"],
+        };
+
+        const generateBtn = document.getElementById('generateBtn');
+        const exerciseDisplay = document.getElementById('exerciseDisplay');
+
+        generateBtn.addEventListener('click', () => {
+            const selectedCategory = document.getElementById('category').value;
+            const categoryExercises = exercises[selectedCategory];
+            
+            if (categoryExercises && categoryExercises.length > 0) {
+                const randomIndex = Math.floor(Math.random() * categoryExercises.length);
+                const randomExercise = categoryExercises[randomIndex];
+                exerciseDisplay.textContent = `Random Exercise: ${randomExercise}`;
+            } else {
+                exerciseDisplay.textContent = 'No exercises available for this category.';
+            }
+        });
+    </script>
+
+<!--exercises....................................................................-->
+        <section id="exercise-list">
+            <ul>
+                <h1>Upper Body Strength:</h1>
+                <li>Push-ups</li>
+                <li>Push Press</li>
+                <li>Inverted Row</li>
+                <li>Dumbbell Bench Press</li>
+                <li>Weighted Dip</li>
+              </ul>
+         </section>
+        </div>
+
+        <section id="exercise-list1">
+            <ul>
+                <h1>Lower Body Strength</h1>
+                <li>Squats</li>
+                <li>Leg Reverse Crunch</li>
+                <li>Tuck Jumps</li>
+                <li>Bicycle Crunches</li>
+                <li>Leteral Ski Jumps</li>
+              </ul>
+    </section>
+    <section id="exercise-list2">
+        <ul>
+            <h1>Upper Body Endurance:</h1>
+            <li>Pull-Ups</li>
+            <li>Kettlebell Single-Arm Shoulder Press</li>
+            <li>Push-Ups</li>
+            <li>Bent-Over Row</li>
+            <li>Bodyweight Squats</li>
+          </ul>
+</section>
+<section id="exercise-list3">
+  <ul>
+      <h1>Lower Body Endurance:</h1>
+      <li>Jumping jacks</li>
+      <li>Split squats</li>
+      <li>Glute bridges</li>
+      <li>Dead lifts</li>
+      <li>Reverse lunges</li>
+    </ul>
+</section>
+<section id="exercise-list4">
+  <ul>
+      <h1>Cardio:</h1>
+      <li>Froggy jumps</li>
+      <li>Burpees</li>
+      <li>Squat jumps</li>
+      <li>Plyo jacks</li>
+      <li>Jump kick lunge</li>
+    </ul>
+</section>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

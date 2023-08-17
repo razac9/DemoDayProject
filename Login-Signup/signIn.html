@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel = "stylesheet" href = "styleSI.css">
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <!-- @NOTE linking firebase version 8 CDNs first -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script defer src = "fire-init.js"></script>
+    <script defer src = "signin.js"></script>
+</head>
+<body>
+    <div id = "message">
+        <h1>Welcome Back! Please Login To Your Account</h1>
+    </div>
+    <div id = "signInBox">
+        <div id = "uEmail">
+            <p>Email</p>
+            <input type = "text" id = "useremail" placeholder="Type in your email">
+        </div>
+        <div id = "passwordBox">
+            <p>Password</p>
+            <input type = "text" id = "password" placeholder="Type in your password">
+        </div>
+
+        <div id = "btn">
+            <button id = "signIn" class = "pill" type = "button">Sign In</button>
+        </div>
+        <div id = "registrationRedirection">
+            <p><a href = "signUP.html">Need an account? Register here!</a></p>
+        </div>
+    </div>
+    
+</body>
+</html>
